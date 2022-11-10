@@ -1,0 +1,35 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="firstName">
+    <label for="firstName">First Name</label>
+    <input id="firstName" type="text" formControlName="firstName" />
+  </div>
+  <div class="lastName">
+    <label for="lastName">Last Name</label>
+    <input id="lastName" type="text" formControlName="lastName" />
+  </div>
+  <div class="email">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      placeholder="example@example.com"
+    />
+  </div>
+  <ng-container formGroupName="passwords">
+    <div class="password">
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password" />
+    </div>
+    <div class="rePassword">
+      <label for="rePassword">Confirm Password</label>
+      <input
+        id="rePassword"
+        type="password"
+        formControlName="rePassword"
+      /></div
+  ></ng-container>
+  <div class="submit">
+    <button type="submit">Register!</button>
+  </div>
+</form>
